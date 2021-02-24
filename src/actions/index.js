@@ -1,7 +1,14 @@
-// eslint-disable-next-line arrow-parens
-const setFavorite = (payload) => ({
-  type: "SET_FAVORITE",
+export const actions = {
+  setFavorite: "SET_FAVORITE",
+  deleteFavorite: "DELETE_FAVORITE",
+};
+
+export const setFavorite = (payload) => ({
+  type: actions.setFavorite,
   payload,
 });
 
-export default setFavorite;
+export const deleteFavorite = (payload) => ({
+  type: actions.deleteFavorite,
+  payload,
+});
