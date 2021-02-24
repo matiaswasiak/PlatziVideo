@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { connect } from "react-redux";
 import Search from "../components/Search";
 import Categories from "../components/Categories";
@@ -14,7 +15,7 @@ const Home = ({ myList, trends, originals }) => {
         <Categories title="Mi Lista">
           <Carousel>
             {myList.map((item) => (
-              <CarouselItem key={item.id} {...item} />
+              <CarouselItem key={item.id} {...item} isList />
             ))}
           </Carousel>
         </Categories>

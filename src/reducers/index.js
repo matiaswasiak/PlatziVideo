@@ -1,6 +1,9 @@
 const reducer = (state, action) => {
+  const exist = state.myList.find((item) => item.id === action.payload.id);
   switch (action.type) {
     case "SET_FAVORITE":
+      if (exist) return { ...state };
+
       return {
         ...state,
         myList: [...state.myList, action.payload],
